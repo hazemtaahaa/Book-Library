@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Input Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-page">
+        <h1 class="page-title">Book Library</h1>
+        <div class="container">
+            <!-- Initial card for number of books -->
+            <div class="card" id="bookInputCard">
+                <h2>Enter Number of Books</h2>
+                <div class="input-group">
+                    <input type="text" id="bookNumber" placeholder="Number of books">
+                    <button id="submitButton">Submit</button>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+
+            <!-- Book details form (initially hidden) -->
+            <div id="bookDetailsContainer" class="book-details-container" style="display: none;">
+                <div class="book-card">
+                    <h3 id="currentBookNumber">Book 1</h3>
+                    <div class="input-group">
+                        <label for="bookTitle">Title:</label>
+                        <input type="text" id="bookTitle" placeholder="Enter book title">
+                    </div>
+                    <div id="titleError" class="error-message"></div>
+                    <div class="input-group">
+                        <label for="bookPrice">Price:</label>
+                        <input type="text" id="bookPrice" placeholder="Enter book price">
+                    </div>
+                    <div id="priceError" class="error-message"></div>
+                    <div class="input-group">
+                        <label for="authorName">Author Name:</label>
+                        <input type="text" id="authorName" placeholder="Enter author name">
+                    </div>
+                    <div id="authorNameError" class="error-message"></div>
+                    <div class="input-group">
+                        <label for="authorEmail">Author Email:</label>
+                        <input type="text" id="authorEmail" placeholder="Enter author email">
+                    </div>
+                    <div id="authorEmailError" class="error-message"></div>
+                    <button id="nextBookButton" class="next-book-button">Next</button>
+                </div>
+            </div>
+            <!-- booksTableContainer -->
+            <div id="booksTableContainer" style="display: none;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Author Name</th>
+                            <th>Author Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booksTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
